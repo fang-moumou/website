@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            margin: .625rem;
+        }
+
+        .box {
+            background-color: steelblue;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 37.5rem;
+            height: 25rem;
+            margin: .625rem;
+            border-radius: .625rem;
+            box-shadow: .125rem .25rem .3125rem rgba(0, 0, 0, 0.3);
+            transform: translateX(400%);
+            transition: transform 0.4s ease;
+            position: relative;
+        }
+
+        .box:nth-of-type(even) {
+            transform: translateX(-400%);
+        }
+
+        .box.show {
+            transform: translateX(0);
+        }
+
+        .box h2 {
+            font-family: 幼圆;
+            position: absolute;
+            bottom: 0rem;
+            right: 0;
+            font-size: 2.8125rem;
+            margin-bottom: 0;
+        }
+        .box P{
+            position: absolute;
+            top: .625rem;
+            left: .625rem;
+            font-size: 2.5rem;
+            display: none;
+        }
+        .box img{
+            width: 37.5rem;
+            height: 25rem;
+            border-radius: .625rem;
+        }
+        a{
+            text-align: center;
+            font-size: 2.8125rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>下滑滚动查看更多中国可爱猫猫</h1>
+    <div class="box">
+        <h2>狸花猫</h2>
+        <img src="../images/狸花猫.png" alt="">
+        <p>狸花猫身上有独特的花纹，在国外也深受欢迎。<br>狸花猫生存能力强、独立，适应新环境快。</p>
+    </div>
+    <div class="box">
+        <h2>玄色猫</h2>
+        <img src="../images/玄色猫.png" alt="">
+        <p>玄猫也叫做黑猫，全身黑色的毛发，它们很擅长<br>隐藏在黑夜中，像个乱窜的小煤球，可能一不小心<br>就会被它吓到或者踩到它。</p>
+    </div>
+    <div class="box">
+        <h2>橘猫</h2>
+        <img src="../images/橘猫.png" alt="">
+        <p>橘猫不是一个特有的猫品种，我们统称身上<br>有橘色的猫咪都叫做橘猫，它们总是一副佛系、懒洋洋的样子，<br>不过性格很亲人，跟所有宠物和人类都能处得来。</p>
+    </div>
+    <div class="box">
+        <h2>三花猫</h2>
+        <img src="../images/三花猫.png" alt="">
+        <p>三花猫是指身上有黑、橘、白三种颜色的猫，它们<br>的毛色分布很随机，所以世界上，没有完全相似的两只三花猫。</p>
+    </div>
+    <div class="box">
+        <h2>奶牛猫</h2>
+        <img src="../images/奶牛猫.png" alt="">
+        <p>奶牛猫是指身上有黑色和白色两种颜色的猫，它们的<br>精力很旺盛，喜欢玩耍，但是很粘人，对<br>主人很忠诚，是一只很有趣的猫。</p>
+    </div>
+    <div class="box">
+        <h2>云猫</h2>
+        <img src="../images/云猫.png" alt="">
+        <p>云猫是国家三级保护动物。数量稀少，属于<br>濒危物种，主要分布在中国云南中部<br>和云南西北部、印度、尼泊尔、泰国。</p>
+    </div>
+    <div class="box">
+        <h2>豹猫</h2>
+        <img src="../images/豹猫.png" alt="">
+        <p>豹猫也是国家三级保护动物，又叫<br>狸猫、铜钱猫、石虎，在中国分部广泛。南方的豹猫为<br>黄色，北方为银灰色，胸、腹部是白色，斑点一般为黑色。</p>
+    </div>
+    <div class="box">
+        <h2>我也是有底线的</h2>
+        <a href="../index.htm">返回主页</a>
+    </div>
+    <script>
+        const boxes = document.querySelectorAll('.box')
+
+        window.addEventListener('scroll', checkBoxes)
+
+        checkBoxes()
+
+        function checkBoxes() {
+            const triggerBottom = window.innerHeight / 5 * 4
+
+            boxes.forEach(box => {
+                const boxTop = box.getBoundingClientRect().top
+
+                if (boxTop < triggerBottom) {
+                    box.classList.add('show')
+                } else {
+                    box.classListNaNpxove('show')
+                }
+            })
+        }
+        for (let i = 0; i < boxes.length; i++) {
+            boxes[i].addEventListener('mousemove',function(){
+                boxes[i].children[2].style.display='block'
+            })
+            boxes[i].addEventListener('mouseout',function(){
+                boxes[i].children[2].style.display='none'
+            })
+            
+        }
+    </script>
+</body>
+
+</html>

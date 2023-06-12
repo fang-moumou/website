@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .bg{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            border-radius: 10px;
+            margin: 100px auto ; 
+            background-color: #4a4a4a;
+            width: 600px;
+            height: 400px;
+            box-shadow: 0 0 8px #222;
+        }
+        .bg .show{
+            flex: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        }
+        .bg a{
+            color: white;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            background-color: #313030;
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        .login{
+            flex: 1;
+            /* opacity: 0.5; */
+            border-radius: 10px;
+            margin: 0 auto ;
+            background:#313030;
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form{
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-family: 华文中宋;
+            color: #eafbff;
+        }
+        .login h1{
+            color: white;
+            font-family: 宋体;
+        }
+        .login input{
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            border-style: none;
+        }
+        .login button{
+            border-style: solid;
+            border-color: white;
+            width: 80px;
+            height: 40px;
+            background-color: #313030;
+            color: white;
+            border-radius: 5px;
+        }
+        .more{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="login">
+            <h1>个人信息注册</h1>
+            <form>
+                <!-- 账号 -->
+                <p>注册账号:<input type="text" ></p>
+                <!-- 密码 -->
+                <p>初始密码:<input type="password" ></p>
+                <!-- 二次密码 -->
+                <p>验证密码:<input type="password" ></p>
+                <!-- 电话 -->
+                <p>手机电话:<input type="text" ></p>
+                <!-- 姓名 -->
+                <p>您的姓名:<input type="text"></p>
+                <div class="more">
+                    <button>提交信息</button>
+                    <button class="gengduo">打开更多</button>
+                </div>
+            </form>
+        </div>
+        <div class="show">
+            <a href="../index.htm">返回主页</a>
+            <a href="#">收起</a>
+        </div>
+    </div>
+    <script>
+        const btn=document.querySelector('.more').querySelector('.gengduo')
+        const show=document.querySelector('.show')
+        const cls=show.children[1]
+        btn.addEventListener('click',function(){
+            if(show.style.display='none'){
+                show.style.display='flex'
+            }
+        })
+        cls.addEventListener('click',function(){
+            if(show.style.display!='none'){
+                show.style.display='none'
+            }
+        })
+    </script>
+</body>
+</html>

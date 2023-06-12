@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 默认设置 -->
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            /* background-color: hsl(218, 93%, 65%) ; */
+            height: 100%;
+            font-family: 微软雅黑;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+    <link rel="stylesheet" href="./CSS/indexNav.css">
+    <link rel="stylesheet" href="./CSS/indexVedio.css">
+    <link rel="stylesheet" href="./CSS/indexSection.css">
+    <link rel="stylesheet" href="./CSS/indexBottom.css">
+    <link rel="stylesheet" href="./CSS/ExpansionCard.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+          <h1 class="logo"><a href="/index.htm">猫咪客栈</a></h1>
+          <ul>
+            <li><input type="search" placeholder="搜索更多小猫咪"></li>
+            <li><a href="./index.htm" class="current">网站主页</a></li>
+            <li><a href="./html/speciesIntroduction.html">更多欣赏</a></li>
+            <li><a href="./html/personalCenter.html">个人中心</a></li>
+            <li><a href="./html/Contactauthor.html">联系作者</a></li>
+            <li><a href="./html/log.html">登录|注册</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class="longpicture">
+        <video src="./media/cat.mp4" controls></video>
+    </div>
+    <div class="section">
+        <div class="top">
+            <h1>养猫的好处</h1>
+            <h2>the benefits of owning a cat</h2>
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <img src="./images/微信图片_20230430215206.jpg" alt="">
+                <img src="./images/微信图片_20230430215037.jpg" alt="">
+                <img src="./images/微信图片_20230430215008.jpg" alt="">
+                <img src="./images/微信图片_20230430215002.jpg" alt="">
+            </div>
+            <div class="center">
+                <img src="./images/微信图片_20230430214950.jpg" alt="">
+                <img src="./images/微信图片_20230430214843.jpg" alt="">
+                <img src="./images/微信图片_20230430214829.jpg" alt="">
+                <img src="./images/猫1.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <h1>异国猫咪欣赏<br>admire foregin cats</h1>
+    <div class="pictureWatch">
+        <div class="panel active" style="background-image: url('./images/美短.jpg')">
+          <h3>美国短毛猫</h3>
+        </div>
+        <div class="panel" style="background-image: url('./images/英短.jpg')">
+          <h3>英国短毛猫</h3>
+        </div>
+        <div class="panel" style="background-image: url('./images/布偶.jpg')">
+            <h3>布偶猫</h3>
+        </div>
+        <div class="panel" style="background-image: url('./images/加菲.jpg')">
+          <h3>加菲猫</h3>
+        </div>
+        <div class="panel" style="background-image: url('./images/暹罗.jpg')">
+          <h3>泰国暹罗猫</h3>
+        </div>
+    </div>
+    <div class="footer">
+        <div id="panel" class="panel-container">
+            <strong>您对我的作品<br>表现满意吗？</strong>
+            <div class="ratings-container">
+                <div class="rating">
+                    <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-17.png"
+                        alt="">
+                    <small>不满</small>
+                </div>
+        
+                <div class="rating">
+                    <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-3.png"
+                        alt="" />
+                    <small>一般</small>
+                </div>
+        
+                <div class="rating">
+                    <img src="https://img.icons8.com/external-neu-royyan-wijaya/64/000000/external-emoji-neumojis-smiley-neu-royyan-wijaya-30.png"
+                        alt="" />
+                    <small>满意</small>
+                </div>
+            </div>
+            <button class="btn" id="send">提交反馈</button>
+        </div>
+    </div>
+    <div class="backTop">
+        <a href="javascript:scroll(0,0)">返回顶部</a>
+    </div>
+    <script src="./JS/ExpansionCard.js"></script>
+    <script src="./JS/index.js"></script>
+</body>
+</html>
